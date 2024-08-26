@@ -100,7 +100,7 @@ class GenshinModal(ui.Modal):
         
         try:
             #HoyoLabに公開している人はこの機能を使う
-            gs.set_cookie(ltuid=179694940, ltoken="3DRoaeDyHN1gFhpvhJ8H1VSfVPuwRrD8fwbP6Nll")
+            gs.set_cookie(ltuid=XXXXXXXXXXXX, ltoken="YYYYYYYYYYYYYYYYYYYYY")
             data_hoyo = gs.get_all_user_data(uid,lang="ja-jp")
             view.add_item(hoyo(data_hoyo))
         #エラー時
@@ -203,7 +203,7 @@ class HugaListMap(discord.ui.Select):
         uid=c.fetchone()[0]
         
 
-        gs.set_cookie(ltuid=179694940, ltoken="3DRoaeDyHN1gFhpvhJ8H1VSfVPuwRrD8fwbP6Nll")
+        gs.set_cookie(ltuid=XXXXXXX, ltoken="YYYYYYYYYY")
         data_hoyo = gs.get_all_user_data(uid,lang="ja-jp")
         for i in range(len(data_hoyo['explorations'])):
             if self.values[0] == data_hoyo["explorations"][i]['name']:
